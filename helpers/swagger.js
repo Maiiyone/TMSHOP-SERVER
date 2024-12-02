@@ -8,8 +8,8 @@ const options = {
       description:
         "API endpoints for a ecommerce TRẦN NGỌC XUÂN MAI AND TIÊN TRẦN",
       contact: {
-        name: "Chem chép Mai",
-        email: "info@miniblog.com",
+        name: "Mai xinh girl",
+        email: "info@gmail.com",
         url: "",
       },
       version: "1.0.0",
