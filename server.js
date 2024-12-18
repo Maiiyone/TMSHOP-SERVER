@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+const dotenv = require("dotenv").config()
 const authRouter = require("./routes/auth/auth-routes");
 const adminProductsRouter = require("./routes/admin/products-routes");
 const adminOrderRouter = require("./routes/admin/order-routes");
@@ -21,7 +22,7 @@ const { swaggerDocs } = require("./helpers/swagger");
 //create a separate file for this and then import/use that file here
 
 mongoose
-  .connect("mongodb+srv://tnxm12112003:tnxm12112003@clustertm.tepsv.mongodb.net/?retryWrites=true&w=majority&appName=ClusterTM")
+  .connect("mongodb+srv://tnxm12112003:Yeutuan1*@tmshopcluster.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000")
   .then(() => console.log("MongoDB connected"))
   .catch((error) => console.log(error));
 
@@ -29,7 +30,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://tmshop-client.vercel.app"
+  "https://tmshop-client.vercel.app",
+  "https://icy-sky-085e2d70f.4.azurestaticapps.net"
 ];
 
 app.use(
